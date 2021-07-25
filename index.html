@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .head {
+            background-color: #0253cc;
+            text-align: center;
+            color: #fff;
+        }
+
+        .tab {
+            border: 1px solid gray;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .hEad {
+            border: 1px solid gary;
+            background-color: #0253cc;
+            color: #fff;
+        }
+
+        .data {
+            border: 1px solid gray;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .mar {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row head">
+        <h1 class="col-12">Assignment Object</h1>
+    </div>
+    <h3>Answer no.1</h3>
+    <table class="tab">
+        <tr class="hEad">
+            <th class="data">Name</th>
+            <th class="data">Price</th>
+            <th class="data">Quantity</th>
+            <th class="data">Total</th>
+        </tr>
+        <tr>
+            <td id="name1" class="data"></td>
+            <td id="price1" class="data"></td>
+            <td id="quantity1" class="data"></td>
+            <td id="total1" class="data"></td>
+        </tr>
+        <tr>
+            <td id="name2" class="data"></td>
+            <td id="price2" class="data"></td>
+            <td id="quantity2" class="data"></td>
+            <td id="total2" class="data"></td>
+        </tr>
+        <tr>
+            <td id="name3" class="data"></td>
+            <td id="price3" class="data"></td>
+            <td id="quantity3" class="data"></td>
+            <td id="total3" class="data"></td>
+        </tr>
+        <tr>
+            <td id="name4" class="data"></td>
+            <td id="price4" class="data"></td>
+            <td id="quantity4" class="data"></td>
+            <td id="total4" class="data"></td>
+        </tr>
+        <tr>
+            <td class="data"></td>
+            <td class="data">Grand Total</td>
+            <td class="data" id="itemtotal"></td>
+            <td class="data" id="pricetotal"></td>
+        </tr>
+    </table>
+    <div style="text-align: center; margin-top: 10px; font-weight: bolder;">Answer no 2 is in console.</div>
+
+    <div style="text-align: center; margin-top: 10px; font-weight: bolder;">Answer no 3 is in console.</div>
+
+    <h3>Answer no.4</h3>
+    <table class="tab" id="myTable">
+        <tr class="hEad">
+            <th class="data">Name</th>
+            <th class="data">Gender</th>
+            <th class="data">Addresss</th>
+            <th class="data">Education</th>
+            <th class="data">Profession</th>
+        </tr>
+        <tr>
+            <td class="data" id="name1"></td>
+            <td class="data" id="gender1"></td>
+            <td class="data" id="address1"></td>
+            <td class="data" id="education1"></td>
+            <td class="data" id="profession1"></td>
+        </tr>
+        <tr>
+            <td class="data" id="user_name"></td>
+            <td class="data" id="user_gender"></td>
+            <td class="data" id="user_address"></td>
+            <td class="data"id="user_education"></td>
+            <td class="data" id="user_profession"></td>
+        </tr>
+    </table>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Add Person
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Person</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="get">
+                        <div class="mar">
+                            Name: &nbsp; &nbsp;
+                            <input type="text" name="name" id="name" size="50">
+                        </div>
+                        <div class="mar">
+                            Gender: &nbsp;
+                            <input type="radio" value="male" name="gender"  id="gender">Male <input type="radio" name="gender" id="gender"
+                                value="female">Female
+                        </div>
+                        <div class="mar">
+                            Address:
+                            <input type="text" name="address" size="50" id="address" style="margin-left: 3px;">
+                        </div>
+                        <div class="mar" >
+                            Education:
+                            <select name="Education" style="width: 360px; margin-left: 20px; outline: none;"id="education">
+                                <option></option>
+                                <option>Matric</option>
+                                <option>Intermediate</option>
+                                <option>Graduate</option>
+                            </select>
+                        </div>
+                        <div class="mar" >
+                            Profession:
+                            <select name="professional" style="width: 360px; margin-left: 17px; outline: none;" id="profession">
+                                <option></option>
+                                <option>Software engineer</option>
+                                <option>Hardware engineer</option>
+                                <option>Labour</option>
+                                <option>Salesman</option>
+                                <option>
+                                    <span>Another:</span>
+                                </option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="myFunction()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="data()" type="reset">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>
