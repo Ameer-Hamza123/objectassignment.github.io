@@ -66,19 +66,19 @@ console.log(sTudent1, sTudent2, sTudent3, sTudent4, sTudent5);
 
 function data(){
     var name = document.getElementById('name').value;
-    // console.log('name', name)
+
     document.getElementById('user_name').innerHTML = name
     var gender = document.getElementById('gender').value;
-    // console.log('gender', gender)
+
     document.getElementById('user_gender').innerHTML = gender
     var address = document.getElementById('address').value;
-    // console.log('address', address)
+
     document.getElementById('user_address').innerHTML = address
     var education = document.getElementById('education').value;
-    // console.log('education', education)
+
     document.getElementById('user_education').innerHTML = education
     var profession = document.getElementById('profession').value;
-    // console.log('profession', profession)
+
     document.getElementById('user_profession').innerHTML = profession
 
 var data = {
