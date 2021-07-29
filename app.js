@@ -63,31 +63,67 @@ console.log(sTudent1, sTudent2, sTudent3, sTudent4, sTudent5);
 // console.log(naMe);
 
 
+function Plan(name, gender, address, education, profession){
+    this.name = name;
+    this.gender = gender;
+    this.address = address;
+    this.education = education;
+    this.profession = profession; 
+} 
 
+
+var nM = new Array();
 function data(){
     var name = document.getElementById('name').value;
-
     document.getElementById('user_name').innerHTML = name
-    var gender = document.getElementById('gender').value;
+    
+    if (document.getElementById('male').checked === true) {
+        var gender = 'Male';
+    } else if(document.getElementById('female').checked === true) {
+        var gender = 'Female';
+    }else {
+        alert("Please select a gender")
+    }
 
+    var gender = gender;
     document.getElementById('user_gender').innerHTML = gender
+    
     var address = document.getElementById('address').value;
-
     document.getElementById('user_address').innerHTML = address
+    
     var education = document.getElementById('education').value;
-
     document.getElementById('user_education').innerHTML = education
+    
     var profession = document.getElementById('profession').value;
-
     document.getElementById('user_profession').innerHTML = profession
 
-var data = {
-    'name' : name,
-    'gender' : gender,
-    'address' : address,
-    'education' : education,
-    'profession' : profession,
-}
-console.log(data);
+    var arr = new Plan(name, gender, address, education, profession)
+    
+    
 
+nM.push(arr);
+console.log(nM)
+// console.log(data)
+var name1 = document.getElementById('name').value = "";
+var gender1 =  document.getElementById('male').checked = false;
+var gender2 =  document.getElementById('female').checked = false;
+var address1 =  document.getElementById('address').value = "";
+var education1 =  document.getElementById('education').value = "";
+var profession1 =  document.getElementById('profession').value = "";
+
+var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+
+    cell1.innerHTML = name;
+    cell2.innerHTML = gender;
+    cell3.innerHTML = address;
+    cell4.innerHTML = education;
+    cell5.innerHTML = profession;
+return name1 + gender1 + gender2 + address1 + education1 + profession1;
 }
+

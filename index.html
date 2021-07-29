@@ -36,12 +36,15 @@
         .mar {
             margin-top: 10px;
         }
+        .data1{
+            height: 0px !important;
+        }
     </style>
 </head>
 
 <body>
-    <div class="row head">
-        <h1 class="col-12">Assignment Object</h1>
+    <div class="head">
+        <h1>Assignment Object</h1>
     </div>
     <h3>Answer no.1</h3>
     <table class="tab">
@@ -86,7 +89,12 @@
 
     <div style="text-align: center; margin-top: 10px; font-weight: bolder;">Answer no 3 is in console.</div>
 
-    <h3>Answer no.4</h3>
+    <div>
+    <h3 style="display: inline-block;">Answer no.4</h3>
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-bottom: 10px; margin-left: 100px;">
+        Add Person
+    </button>
+</div>
     <table class="tab" id="myTable">
         <tr class="hEad">
             <th class="data">Name</th>
@@ -95,24 +103,15 @@
             <th class="data">Education</th>
             <th class="data">Profession</th>
         </tr>
-        <tr>
-            <td class="data" id="name1"></td>
-            <td class="data" id="gender1"></td>
-            <td class="data" id="address1"></td>
-            <td class="data" id="education1"></td>
-            <td class="data" id="profession1"></td>
-        </tr>
-        <tr>
-            <td class="data" id="user_name"></td>
-            <td class="data" id="user_gender"></td>
-            <td class="data" id="user_address"></td>
-            <td class="data"id="user_education"></td>
-            <td class="data" id="user_profession"></td>
+        <tr style="visibility: hidden;">
+            <td class="data1" id="user_name"></td>
+            <td class="data1" id="user_gender"></td>
+            <td class="data1" id="user_address"></td>
+            <td class="data1" id="user_education"></td>
+            <td class="data1" id="user_profession"></td>
         </tr>
     </table>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Add Person
-    </button>
+    
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -131,7 +130,7 @@
                         </div>
                         <div class="mar">
                             Gender: &nbsp;
-                            <input type="radio" value="male" name="gender"  id="gender">Male <input type="radio" name="gender" id="gender"
+                            <input type="radio" value="male" name="gender"  id="male">Male <input type="radio" name="female" id="female"
                                 value="female">Female
                         </div>
                         <div class="mar">
@@ -163,12 +162,13 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="data()" type="reset">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
+                    <button type="button" class="btn btn-primary" type="reset"  onclick="data()">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- -->
 </body>
 <script src="app.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
